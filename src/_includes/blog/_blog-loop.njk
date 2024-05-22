@@ -1,0 +1,35 @@
+
+
+
+<li>
+<a class="w-100 slide-item-home  {{blog.data.category }}" href="{{ blog.url }}"> 
+  <div class="mb-24">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="aspect-32 w-100 border-24 p-relative o-hidden zoom-img">
+
+          <button  aria-label="{{ blog.data.category }} " class="btn btn-primary btn-attribute {{ 'bg-blue' if blog.data.category == 'Artículo' else ' ' }}">{{ blog.data.category }}  </button>
+    
+            <div class="video-cover">
+              <img   width="100%" height="100%" src="{{blog.data.image }}"
+                alt="{{blog.data.imageAlt }}"       title="{{ blog.data.imageAlt | replace('.jpg', '') }}" class="h1">
+            </div>
+  
+        </div>
+      </div>
+      <div class="col-xs-12 ">
+        <div class="ptr-32  ">
+          <h3 class="p5 "> {{blog.data.title }} </h3>
+
+          
+          {# <h3 class="fluid-9-r mb-16"> {{blog.data.subtitle }}</h3>
+          <p class=" mbr-64 ">{{blog.data.description }}</p>
+          <p class="mb-8  text-12-r c-dark-grey">{{blog.data.date | postDate }}</span></p> #}
+
+        </div>
+      </div>
+    </div>
+
+  </a>
+</li>
+

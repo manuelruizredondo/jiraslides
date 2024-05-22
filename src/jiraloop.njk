@@ -1,0 +1,102 @@
+---
+layout: baserestaurant.njk
+pagination:
+  data: jiras.elementos
+  size: 1
+  alias: elemento
+permalink: "/jiras/{{ elemento.titular | slugify }}/"
+---
+
+<div class="container ">
+  <div class="row mt-24">
+
+    <div class="col-xs-6">  <a href="/directorio"> Directorio</a>   </div>
+    <div class="col-xs-6 text-right">
+      {% if pagination.href.previous %}
+        <a class="btn btn-primary" href="{{ pagination.href.previous }}">Anterior</a>
+      {% endif %}
+      {% if pagination.href.next %}
+        <a class="btn btn-primary" href="{{ pagination.href.next }}">Siguiente</a>
+      {% endif %}
+    </div>
+  </div>
+  
+
+<div class="row mb-24">
+  <div class="col-xs-6">
+    <h1 class="fluid-3-r  mb-16  " >{{ elemento.titular }}</h1>
+
+  </div>
+</div>
+
+<div class="row mb-64" >
+  <div class="col-xs-12">
+
+    <h1 class="h1 mb-16  " >{{ elemento.subtitulo }}</h1>
+    <h1 class="fluid-8-r mb-16  " >{{ elemento.descripcion }} </h1>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-xs-12 col-sm-3">
+    <h6 class="h6"> Entrega Web</h6>
+    {{ elemento.entrega_web }}
+  </div>
+  <div class="col-xs-12 col-sm-3">
+    <h6 class="h6"> Entrega IOS</h6>
+    {{ elemento.entrega_ios }}
+  </div>
+  <div class="col-xs-12 col-sm-3">
+    <h6 class="h6"> Entrega Android</h6>
+    {{ elemento.entrega_android }}
+  </div>
+  <div class="col-xs-12 col-sm-3">
+    <h6 class="h6"> Entrega Golive</h6>
+    {{ elemento.golive }}
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-4">    <img width="100%" src="    {{ elemento.imagen }}" alt=""></div>
+</div>
+
+
+
+
+
+<div class="row mb-32">
+  <div class="col-xs-4">  <div class="fluid-3-r"> Zona links  </div> </div>
+</div>
+
+
+
+
+  <ul class="grid-2 list-clear">
+
+
+  {% for idx in range(0, jiras.jira | length) %}
+    {% set jira = jiras.jira[idx] %}
+    {% set link = elemento.links[idx] %}
+
+    <a href="/jiras/{{jiras.elementos[idx].titular | slugify }}">
+  <div class="mb-24">
+  
+    <div>{{link.nombre}}</div>
+    <div>{{link.apellido}}</div>
+    <div>{{link.url}}</div>
+  </div>
+</a>
+
+
+
+
+  {% endfor %}
+  </ul>
+
+
+
+
+</div>

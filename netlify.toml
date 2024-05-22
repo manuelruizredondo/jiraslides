@@ -1,0 +1,5 @@
+[build]
+  command = "npm run build && npx @11ty/eleventy"
+  functions = "functions"
+[functions]
+  node_bundler = "esbuild"

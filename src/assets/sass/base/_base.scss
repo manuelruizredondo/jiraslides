@@ -1,0 +1,99 @@
+
+$space-left: calc(((100vw - 1600px + ($padding-global * 4)) / 2));
+$width-left: calc((1280px + (100vw - 1600px) / 2));
+@mixin fluid-text($min-vw, $max-vw, $min-font-size, $max-font-size, $fluid-line-height) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+  @if $u1==$u2 and $u1==$u3 and $u1==$u4 {
+    & {
+      font-size: $min-font-size;
+      line-height: $fluid-line-height;
+      @media (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{unity($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{unity($max-vw - $min-vw)}));
+        line-height: $fluid-line-height;
+      }
+      @media (min-width: $max-vw) {
+        font-size: $max-font-size;
+        line-height: $fluid-line-height;
+      }
+    }
+  }
+}
+
+@include space($breakpoints, $padding, $p);
+@include space($breakpoints, $padding-top, $pt);
+@include space($breakpoints, $padding-left, $pl);
+@include space($breakpoints, $padding-bottom, $pb);
+@include space($breakpoints, $padding-right, $pr);
+
+
+.input,
+.textarea,
+.select select {
+  padding-left: 0;
+  background-color: transparent;
+  border-color: $c-white;
+  border-width: 0 0 1px 0;
+  color: $c-primary;
+  max-width: 100%;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1;
+  &:focus {
+    border-width: 0 0 2px 0;
+  }
+}
+img {
+  max-width: initial;
+}
+.fill {
+  object-fit: cover;
+}
+.form-input-label-2>input,
+.form-input-label-2>label,
+.form-input-label-2>textarea,
+.error-zone>input,
+.error-zone>label {
+  font-family: $font-family-form;
+  padding-left: 0;
+  font-weight: normal;
+  font-size: 16px;
+  color: $c-primary;
+}
+.form-input-label-2 input:not(:placeholder-shown)~label,
+.error-zone input:not(:placeholder-shown)~label {
+  color: $c-primary;
+}
+.form-input-label-2 input {
+  background-color: transparent;
+}
+b {
+  @include font-bold;
+  .has-light & {
+    color: white;
+  }
+}
+ul.list-clear li {
+  list-style: none;
+  margin: 16px 0;
+}
+
+.textarea {
+    min-height: 100px;
+  }
+
+  a {
+    opacity: 1;
+    transition: opacity ease 0.2s;
+  }
+  a:hover {
+    opacity: 0.8;
+  }
+
+  .input,
+.textarea,
+.select select {
+  border-bottom: 1px solid $c-primary;
+}

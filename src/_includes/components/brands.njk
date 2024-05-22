@@ -1,0 +1,16 @@
+<section class="container-global mx-auto ptr-64 pbr-64 ">
+<div class="row mb-64">
+  <div class="col-xs-12">
+    <h3 class="h3 mb-24">Trabajamos con las primeras marcas</h3>
+  </div>
+</div>
+    <div class="grid-8 scroll-nat text-center">
+{% for brand in global.brands.split(',') %} 
+  {% set delay = loop.index * 100 %}
+  <div class=" brand-partner">
+    <img  width="100%" height="auto" data-aos-delay="{{ delay }}" src="{{ global.imageDir }}{{ brand }}.jpg" alt="{{ brand }}" alt="Logotipo {{ brand }} "title="Logotipo {{ brand }} " >
+  </div>
+{% endfor %}
+    </div>
+
+</section>

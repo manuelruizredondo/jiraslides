@@ -1,0 +1,26 @@
+<div class="swiper-slide zoom-img   ">
+  <a class="slide-item-home  " href="{{ casosdeexito.url }} " title="{{casosdeexito.data.title}}"
+    arial-label="{{casosdeexito.data.title}}">
+    <div class="aspect-300 slide-link  border-24 zoom-img-item  ">
+      <div class="z-20" aria-label="slide carrousel">
+        <div class="slide-text is-flex flex-column content-sp-between p-16 pt-24 pb-24 c-white ">
+          <div class="slide-text-footer">
+            <p class="h2 mb-16">{{casosdeexito.data.herotitle}} </p>
+            <p class="p1">{{casosdeexito.data.herodesc}}</p>
+          </div>
+          <div class="slide-text-content">
+            <div class="slide-logo"
+              style="background-image: url( /assets/static/images/casos/logo_{{casosdeexito.data.caso}}.jpg);">
+            </div>
+            <div>
+              <p class="h3 mb-4">{{ casosdeexito.data.caso }}</span></p>
+              <p class="p1 ">{{ casosdeexito.data.herotitle }}</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="swiper-img" width="100%" height="100%"
+        src="/assets/static/images/casos/heroimg_{{casosdeexito.data.caso}}.jpg" alt="{{ casosdeexito.data.imageAlt }} "  title="{{ casosdeexito.data.imageAlt }} ">
+    </div>
+  </a>
+</div>

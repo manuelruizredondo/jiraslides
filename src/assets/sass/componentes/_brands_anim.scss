@@ -1,0 +1,114 @@
+
+  .brandscarrousel {
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    height: 70px;
+    width: 100%;
+  
+    overflow: hidden;
+    background: white;
+    white-space: nowrap;
+
+  
+    span {
+      float: left;
+      width: 50%;
+      height: 70px;
+      overflow: hidden;
+    }
+
+
+  }
+  
+  .brandscarrousel--inner {
+    display: block;
+    position: absolute;
+  
+    
+   
+    @media (min-width: 1px) {
+      width: 600%;
+        animation: brandscarrousel1 40s linear infinite;
+    }
+    @media (min-width: 786px) {
+      width: 400%;
+        animation: brandscarrousel2 40s linear infinite;
+    }
+    @media (min-width: 1280px) {
+      width: 200%;
+        animation: brandscarrousel3 40s linear infinite;
+    }
+  
+  
+    
+  
+    div {
+      height: 70px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+  
+      > div {
+        width: calc((100% / 7) - 20px); // 7 es el nombre de logos usados
+        height: 70px;
+  
+        position: relative;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+  
+        img {
+          object-fit: scale-down;
+          width: 100%;
+          height: 100%;
+  
+          &:hover {
+            opacity: 0.6;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    &:hover {
+      animation-play-state: paused;
+      color: pink;
+    }
+  }
+
+  
+  @keyframes brandscarrousel1 {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -300%;
+    }
+  }
+  
+  
+  @keyframes brandscarrousel2 {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -200%;
+    }
+  }
+  
+  
+  @keyframes brandscarrousel3 {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -100%;
+    }
+  }
+  
+  
+  

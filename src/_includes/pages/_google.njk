@@ -1,0 +1,127 @@
+---
+layout: base.njk
+---
+{% import "macros/_insert.njk" as insert %}
+{% include 'templates/qr-herofull.njk' %}
+{% include 'components/qr-herosub.njk' %}
+<div class="container ptr-120 pbr-64 inview">
+  <div class="row ">
+    <div class="col-xs-12 col-sm-4 appear ">
+      {% call insert.imgtext( 'googlereviews/googlereviews-1.jpg', 'El 29% de los comensales con Check dejan una reseña.','', '', '',
+      '11' ,'') %} {% endcall %}
+    </div>
+    <div class="col-xs-12 col-sm-4 appear delay-250">
+      {% call insert.imgtext( 'googlereviews/googlereviews-2.jpg', 'Cuando salimos a cenar en una zona desconocida, lo primero que
+      hacemos es buscar recomendados en Google', '', '','', '11','' ) %} {% endcall %}
+    </div>
+    <div class="col-xs-12 col-sm-4 appear delay-500">
+      {% call insert.imgtext( 'googlereviews/googlereviews-3.jpg', 'Google es la primera plataforma para buscar restaurantes.','', '',
+      '','11','' ) %}
+      {% endcall %}
+    </div>
+  </div>
+</div>
+<div class="container-fluid pbr-120 inview">
+  <div class="row bleed-0">
+    <div class="col-xs-12">
+      <div class="brandscarrousel appear delay-250">
+        <div class="brandscarrousel--inner ">
+          <span>
+            <div>
+              <div>
+                <img src="/assets/static/images/googlereviews/review-1.png" alt="">
+              </div>
+              <div>
+                <img src="/assets/static/images/googlereviews/review-2.png" alt="">
+              </div>
+              <div>
+                <img src="/assets/static/images/googlereviews/review-3.png" alt="">
+              </div>
+              <div>
+                <img src="/assets/static/images/googlereviews/review-4.png" alt="">
+              </div>
+              <div>
+                <img src="/assets/static/images/googlereviews/review-5.png" alt="">
+              </div>
+              <div>
+                <img src="/assets/static/images/googlereviews/review-6.png" alt="">
+              </div>
+              <div>
+                <img src="/assets/static/images/googlereviews/review-7.png" alt="">
+              </div>
+            </div>
+          </span>
+          <span>
+            <div>
+              <div>
+                <img src="/assets/static/images/googlereviews/review-1.png" alt="">
+              </div>
+              <div>
+                <img src="/assets/static/images/googlereviews/review-2.png" alt="">
+              </div>
+              <div>
+                <img src="/assets/static/images/googlereviews/review-3.png" alt="">
+              </div>
+              <div>
+                <img src="/assets/static/images/googlereviews/review-4.png" alt="">
+              </div>
+              <div>
+                <img src="/assets/static/images/googlereviews/review-5.png" alt="">
+              </div>
+              <div>
+                <img src="/assets/static/images/googlereviews/review-6.png" alt="">
+              </div>
+              <div>
+                <img src="/assets/static/images/googlereviews/review-7.png" alt="">
+              </div>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container inview">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="bg-dark border-24">
+        <div class="row ptr-64 pbr-64 text-center">
+          <div class="col-xs-12  col-sm-3">
+            <div class="p-32">
+              <div class="fluid-4-m mb-8">4.77</div>
+              <div class="h3">Calificación promedio de los restaurantes dominicales</div>
+            </div>
+          </div>
+          <div class="col-xs-12  col-sm-3">
+            <div class="p-32">
+              <div class="fluid-4-m mb-8">423K </div>
+              <div class="h3">Reseñas de Google de 5 estrellas recopiladas</div>
+            </div>
+          </div>
+          <div class="col-xs-12  col-sm-3">
+            <div class="p-32">
+              <div class="fluid-4-m mb-8">502K</div>
+              <div class="h3">Correos electrónicos de resumen enviados</div>
+            </div>
+          </div>
+          <div class="col-xs-12  col-sm-3">
+            <div class="p-32">
+              <div class="fluid-4-m mb-8">505K</div>
+              <div class="h3">Respuestas de IA enviadas a los clientes</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 align-center ptr-120 pbr-120">
+      <div>
+        <div class="p1 mb-16"> ¿Quieres saber más? </div>
+      </div>
+      <a href="/blog"><button aria-label=" Leer nuestros articulos" class="btn btn-primary h1"> Leer nuestros articulos</button></a>    </div>
+  </div>
+</div>
+{% include "../templates/qr-contacta.njk" %}

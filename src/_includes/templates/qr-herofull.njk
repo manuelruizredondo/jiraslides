@@ -1,0 +1,36 @@
+<section>
+  <div class="container-global mx-auto ptr-200 pbr-120 inview   ">
+    <div class="row  align-middle  ">
+      <div class="col-xs-12">
+     <div class="vertical-wrap  "  style="padding-top:{{word_accent1}} " >
+          <div class="vertical-inner delay-1">
+            <h1 class=" {{ sizetext}} "> {{word1}} <div class="minibox-r bg-blue"> <img src=" /assets/static/images/icons/{{iconmini1 }}  " alt=""> </div>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12">
+
+
+        <div class="vertical-wrap    "  style="padding-top:{{word_accent2}} " >
+
+          <div class="vertical-inner delay-2 text-right">
+        
+            <h2 class="{{ sizetext}}">        {% if iconminigoogle %}     <img class="icongoogle" src="/assets/static/images/icons/{{iconminigoogle }}  " alt="">       {% else %}      <div  class="minibox-l bg-orange">  <img src="/assets/static/images/icons/{{iconmini2 }}  " alt=""> </div>   {% endif %}   
+          {{word2}}
+            </h2>
+          </div>
+        </div> 
+      <div class="col-xs-12">
+        {% if word3 %}
+     <div class="vertical-wrap text-left "  style="padding-top:{{word_accent3}} " >
+          <div class="vertical-inner delay-3">
+            <h3 class="{{ sizetext}}"> {{word3}} <div class="minibox-r bg-blue">  <img src="/assets/static/images/icons/{{iconmini3 }}  " alt=""> </div>
+            </h3>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

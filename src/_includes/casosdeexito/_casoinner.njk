@@ -1,0 +1,176 @@
+---
+layout: base.njk
+---
+{% import "macros/_insert.njk" as insert %}
+
+<section class="">
+    <div class="container-global mx-auto inview  ">
+      <div class="row section-x ptr-200 pbr-64  align-middle  ">
+        <div class="col-xs-12 col-sm-7 front-text mdmax:mb-42  mt-24 sm:mt-0">
+          <div class=" ">
+            <div class="is-flex gap-16">
+              <p class="h2 c-orange mb-32 "> {{herotitle}} </p> <span class="h2 c-middle-grey"> {{ herofecha }} </span>
+            </div>
+            <h1 class="fluid-4-r pbr-64 ">         {% call insert.splitenpalabras(herodesc , '',10,10  ) %} {% endcall %}  </h1>
+            <p class="h2 appear delay-2000 ">{{ herosub }}</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-1"></div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="aspect-45 box-appear delay-1500">
+            <img class="video-cover border-24 " width="100%" height="100%"
+              src="/assets/static/images/casos/heroimg_{{caso }}.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% set next = collections.casosdeexito | nextInCollection(page.fileSlug) %}
+{% set previous = collections.casosdeexito | prevInCollection(page.fileSlug) %}
+<div class="container-3 ptr-120 pbr-120 inview">
+    <div class="row ">
+        <div class="col-xs-12 col-sm-6 mb-32 sm:mb-0">
+            <div class="mini-box">
+                <h4 class="h6 mb-24 c-orange appear">{{2casotitle}}  </h4>
+                <p class="h2 appear ">{{2casodesc}}  </p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 pt-40">
+            <p class="p1 appear delay-250">{{2casocontenido}}  </p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid mb-32 inview ">
+    <div class="row  bg-dark  parallax " style="background-image: url( /assets/static/images/casos/2casoimg_{{caso}}.jpg);">
+<div class="parallax-content">
+
+</div>
+
+  
+    </div>
+</div>
+<div class="container-3 mb-64 ">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <p class="p1">{{2casoimg_desc}}   </p>
+        </div>
+    </div>
+</div>
+<div class="container-3 pbr-120">
+    <div class="row">
+        <div class="col-xs-2 col-sm-4"></div>
+        <div class="col-xs-10 col-sm-8">
+            <div class="p4">
+                {{3casoquotes}}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if 4casotitle %}
+<div class="container-3  pbr-120">
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <div class="aspect-11 mb-24 sm:mb-0">
+          
+                {% image "casos/4casoimg_" ~ caso ~ ".jpg", "alt","title", "border-24 video-cover" %}
+                {{caso}} fffff
+          
+
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6 align-middle">
+            <div class="mini-box">
+                <h5 class="h2 mb-32">{{4casotitle}}  </h5>
+                <p class="p1">{{4casodesc}}  </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% if 5casotitle %}
+<div class="container-3  pbr-120">
+    <div class="row sm:reverse">
+        <div class="col-xs-12 col-md-6 align-middle mb-32  sm:mb-0">
+            <div class="mini-box">
+                <h5 class="h2 mb-32">{{5casotitle}}  </h5>
+                <p class="p1">
+   <p class="p1">{{5casodesc}} </p>
+
+                </p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <div class="aspect-11 mb-24 sm:mb-0">
+
+                {% if 5casotitle %}
+                {% image "casos/5casoimg_" ~ caso ~ ".jpg", "alt","title", "border-24 video-cover" %}
+                {{caso}} fffff
+                {% endif %}
+
+    
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endif %}
+{% include "../components/qr-swiper-34.njk" %}
+
+{# 
+    <div class="container-fluid bg-light ptr-120 pbr-120">
+        <div class="row">
+            <div class="col-xs-6">
+                {% if previous %}
+                <a href="{{ previous.url }} ">
+                    <div class="aspect-32 mb-24 o-hidden border-24 p-relative">
+                        <img class="video-cover" width="100%"
+                            src="/assets/static/images/casos/heroimg_{{ previous.data.caso }}.jpg" alt="">
+                    </div>
+                    <div class="h2 c-orange mb-8">
+                        ANTERIOR</div>
+                    <div class="h2">{{ previous.data.caso }} </div>
+                </a>
+                {% endif %}
+            </div>
+            <div class="col-xs-6 ">
+                {% if next %}
+                <a href="{{ next.url }} ">
+                    <div class="aspect-32 mb-24 o-hidden border-24 p-relative">
+                        <img class="video-cover" width="100%"
+                            src="/assets/static/images/casos/heroimg_{{ next.data.caso }}.jpg" alt="">
+                    </div>
+                    <div class="h2 c-orange mb-8"> SIGUIENTE </div>
+                    <div class="h2">{{ next.data.caso }} </div>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div> #}
+
+</div>
+
+
+
+
+
+{% include "../templates/qr-contacta.njk" %}
+
+<script>
+const parallaxElements = [...document.getElementsByClassName('parallax')];
+
+const parallax = function(img) {
+	const speed = 3;
+	let pos = '-' + (window.pageYOffset / speed) + "px";
+	img.style.backgroundPosition = `center ${ pos }`;
+}
+
+window.addEventListener('scroll', function(e) {
+	parallaxElements.forEach( (img) => {
+		parallax(img);
+	});
+});
+</script>

@@ -1,0 +1,27 @@
+<section class="container-global mx-auto ptr-64 pbr-64 ">
+
+<div class="row mb-32">
+  <div class="col-xs-12">
+    <h5 class="h1 c-blue ">Clientes</h5>
+    <h6 class="h1 c-middle-grey">Confían en Check</h6>
+  </div>
+</div>
+
+<div class="row">
+  
+
+    <div class="grid-6 text-center w-100">
+      {% for brand in global.brands.split(',') %} 
+        {% set delay = loop.index * 100 %}
+        <div class=" brand-partner">
+          <img  width="350" height="200" data-aos-delay="{{ delay }}" src="{{ global.imageDir }}logos/{{ brand }}.svg"  alt="Logotipo {{ brand }} "title="Logotipo {{ brand }} ">
+        </div>
+      {% endfor %}
+          </div>
+      
+
+  </div>
+</div>
+
+
+</section>

@@ -1,0 +1,69 @@
+---
+layout: base.njk
+---
+{% import "macros/_insert.njk" as insert %}
+{% include 'templates/qr-herofull.njk' %}
+
+{% include 'components/qr-herosub.njk' %}
+
+<div class="container-3 ptr-120">
+    <div class="row">
+        <div class="col-xs-12 inview">
+
+
+
+
+        <ul role="list" class="list-clear grid-2 ">
+
+
+            <li class="appear">
+
+
+                {% call insert.imgtext( 'loyalty1.jpg', 'Conoce quiénes son tus clientes con la matriz de Check.','Realizamos una clasificación para conocer quiénes son tus clientes Platino, Oro y Bronce.', '', '', '11',''   ) %} {% endcall %}
+
+              </li>
+
+                 <li class="appear delay-250">
+                {% call insert.imgtext( 'loyalty2.jpg', 'Integraciones.','Estamos integrados con los sistemas TPV más utilizadas desde donde recogemos información muy valiosa para cruzar con nuestra base de datos y hacer un loyalty efectivo.', '' , '', '11' ,''  ) %} {% endcall %}
+              </li>
+
+
+
+                    <li class="appear delay-500">
+                {% call insert.imgtext( 'loyalty3.jpg', 'Cupones y descuentos.','Automatizamos la gestión de los cupones y descuentos para que Check ejecute un plan personalizado planificado por el punto de venta, automáticamente.', '' , '',  '11' ,''  ) %} {% endcall %}
+              </li>
+
+                    <li class="appear delay-750">
+                {% call insert.imgtext( 'loyalty4.jpg', 'Tarjetas de fidelización.','Lorem ipsum dolor sit amet consectetur. Vitae pulvinar nulla id nulla ultrices ultrices. Interdum tincidunt cursus vitae adipiscing cras sollicitudin lectus ornare sit.', '' ,  '', '11' ,''  ) %} {% endcall %}
+              </li>
+
+
+
+
+        </ul>
+   
+        </div>
+    </div>
+<div class="row inview">
+    <div class="col-xs-12">
+        <div class="appear">{% call insert.imgtextlg( 'loyalty5.jpg', 'Automatiza tus procesos de marketing.','Tener la capacidad de poder comunicarte con tu cliente de manera muy sutil, elegante y poco invasivo es de gran ayuda para atraer ventas recurrentes y ocupar cuota de mente de manera positiva en tu base de clientes.','Por ello, en Check hemos definido un proceso de email marketing, whatsapps de aviso y otras comunicaciones al móvil que aportan valor y ayudan a crecer el volumen de ventas de manera recurrente.', '' , ''   ) %} {% endcall %}</div>
+        <div class="appear delay-500">{% call insert.imgtextlg( 'loyalty6.jpg', 'Panel de análisis de la fidelización de tus clientes.','','Lo que no se puede medir no se puede mejorar. De nada servirían todas estas funcionalidades si no pudiésemos hacer un seguimiento en tiempo real y tomar decisiones inteligentes data-driven.', '' , ''   ) %} {% endcall %}</div>
+    </div>
+</div>
+
+
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 align-center ptr-120 pbr-120">
+            <div>  <div class="p1 mb-16"> ¿Quieres saber más? </div>  </div>
+
+
+            <a href="/blog"><button aria-label=" Leer nuestros articulos" class="btn btn-primary h1"> Leer nuestros articulos</button></a>        </div>
+    </div>
+</div>
+
+
+{% include "../templates/qr-contacta.njk" %}

@@ -1,0 +1,22 @@
+{% import "macros/_insert.njk" as insert %}
+
+<section>
+  <div class="container-global mx-auto ptr-200 pbr-120 inview   ">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 mb-32">
+        <div class="mb-24">
+          <div class="h2 c-orange mb-24">{{herotext1}} </div>
+          <div class="fluid-4-r mb-24">{{herotext2}}   </div>
+          <div class="p1">{{herotext3}}  </div>
+        </div>
+        <button aria-label=" Empezar ahora " class="btn btn-primary"> Empezar ahora</button>
+      </div>
+      <div class="col-xs-12 col-sm-1"></div>
+      <div class="col-xs-12 col-sm-7">
+
+
+        {% image herotext_img ,"alt","title"," img-natural" %}
+      </div>
+    </div>
+  </div>
+</section>

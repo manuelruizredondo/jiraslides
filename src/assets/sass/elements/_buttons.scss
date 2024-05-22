@@ -1,0 +1,169 @@
+.btn {
+  height: 53px;
+  padding-top: 12px;
+  padding-inline: 23px;
+  @include font-medium;
+}
+.btn-primary {
+  color: $c-white;
+  background: $c-primary;
+  border: none;
+
+  line-height: 1px;
+  &:hover {
+    border: none;
+    background: $c-primary;
+  }
+}
+.btn-secondary {
+  color: $c-white;
+  border: 1px solid $c-primary;
+  color: $c-primary;
+  font-size: 14px;
+
+  line-height: 1px;
+  &:hover {
+    color: white;
+    background: $c-primary;
+    border: 1px solid $c-primary;
+  }
+}
+.btn-tertiary {
+  font-size: 14px;
+
+  line-height: 1px;
+  border: none;
+  background: none;
+  letter-spacing: .8px;
+  padding: 0;
+  &:hover ,&:focus ,&:active {
+    background: none;
+    color: $c-primary;
+    border: none;
+  }
+}
+
+
+
+.btn-outline {
+  /* btn-secondary */
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  padding-inline: 20px;
+  height: 53px;
+  color: #838383;
+  border: 1px solid #DADADA;
+
+  @media (min-width: $break-sm) {
+
+
+  }
+
+
+  img {
+    margin-right: 8px;
+  }
+  &:hover {
+    background: none;
+    border: 1px solid $c-orange;
+    color: $c-primary;
+    opacity: 1;
+  }
+  &.is-active {
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    opacity: 1;
+  }
+}
+
+
+
+.btn-outline-2 {
+  /* btn-secondary */
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  padding-inline: 16px;
+
+  color: #838383;
+  border: 1px solid #DADADA;
+
+  @media (min-width: $break-sm) {
+
+    padding-inline: 20px;
+    height: 53px;
+  }
+
+
+  img {
+    margin-right: 8px;
+  }
+  &:hover {
+    background: none;
+    border: 1px solid $c-orange;
+    color: $c-primary;
+    opacity: 1;
+  }
+  &.is-active {
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    opacity: 1;
+  }
+}
+
+
+
+.has-light {
+  .btn-primary {
+    color: $c-white;
+    background-image: var(--bg-primary);
+    border: 1px solid #3D40F5;
+  }
+}
+.btn-attribute {
+  position: absolute;
+  text-transform: capitalize;
+  z-index: 10;
+  top: 16px;
+  left: 16px;
+}
+
+
+.submenu-list{
+  .btn.btn-tertiary{
+
+
+    &:hover{
+      color: white;
+    }
+
+    &:focus{
+background-color: transparent;
+border: none;
+    }
+  }
+}
+
+
+.submenu-list .btn.btn-tertiary:hover {
+  color: rgb(254, 109, 78);
+}
+
+
+
+.menu-open{
+  overflow: hidden;
+
+  .submenu-list .btn.btn-tertiary:hover,
+  .submenu-list .btn.btn-tertiary:active,
+  .submenu-list .btn.btn-tertiary:focus {
+    color:white;
+  }
+  
+  
+  
+  
+}

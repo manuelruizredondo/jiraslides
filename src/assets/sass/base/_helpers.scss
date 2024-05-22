@@ -1,0 +1,170 @@
+@include space($breakpoints, $padding, $p);
+@include space($breakpoints, $padding-top, $pt);
+@include space($breakpoints, $padding-left, $pl);
+@include space($breakpoints, $padding-bottom, $pb);
+@include space($breakpoints, $padding-right, $pr);
+@include space($breakpoints, $margin-bottom, $mb);
+.sm\:mb-16 {
+  @media (min-width: $break-sm) {
+    margin-bottom: 16px;
+  }
+}
+.p-1 {
+  padding: 1px;
+}
+.bg-light {
+  color: $c-primary;
+}
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+.sm\:pl-16 {
+  padding-left: 0;
+  @media (min-width: $break-md) {
+    padding-left: 16px;
+  }
+}
+.sm\:text-right {
+  @media (min-width: $break-md) {
+    text-align: right;
+  }
+}
+.rat-3-2 {
+  position: relative;
+  aspect-ratio: 3 / 2;
+}
+.aspect-21 {
+  position: relative;
+  aspect-ratio: 21 / 9;
+}
+.aspect-32 {
+  position: relative;
+  aspect-ratio: 3 / 2;
+}
+.aspect-54 {
+  position: relative;
+  aspect-ratio: 5 / 4;
+}
+.aspect-11 {
+  position: relative;
+  aspect-ratio: 1 / 1;
+}
+.aspect-34 {
+  position: relative;
+  aspect-ratio: 3 / 4;
+}
+.aspect-300 {
+  position: relative;
+  aspect-ratio: 300 / 470;
+}
+.aspect-45 {
+  position: relative;
+  aspect-ratio: 4 / 5;
+}
+.gap-16 {
+  gap: 16px;
+}
+.link-line {
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+}
+.ttc {
+  text-transform: capitalize;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.smmax\:grid-1 {
+  @media (max-width: #{$break-sm - 1}) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+  }
+}
+.smmax\:grid-3 {
+  @media (max-width: #{$break-sm - 1}) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+.sm\:grid-3 {
+  @media (min-width: #{$break-sm}) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+.margin-esp {
+  margin-inline: 40px;
+  @media (min-width: $break-md) {
+    margin-left: 40px;
+  }
+  @media (min-width: 1650px) {
+    margin-left: $space-left ;
+  }
+}
+.swiper-img {}
+.ttc {
+  text-transform: capitalize;
+}
+a:has(.product) {
+  opacity: 1 !important;
+  &:hover {
+    opacity: 1 !important;
+  }
+}
+.z-20 ,.z-20::after{
+  z-index: 20;
+}
+.border-24 {
+  border-radius: var(--btn-radius);
+}
+.wmax-450 {
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mdmax\:order-last {
+  @media (max-width: $break-md) {
+    order: 3;
+  }
+}
+.rad-24 {
+  border-radius: 24px;
+}
+.z-10 {
+  z-index: 10;
+}
+.img-natural {
+  width: 100%;
+  height: initial;
+}
+
+.front-section {
+  z-index: 10;
+  position: relative;
+}
+.front-text {
+  position: relative;
+  z-index: 10;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.hoverable_link{
+  a{
+    cursor: none;
+  }
+
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{{ metaTitle }}</title>
+
+
+    <meta name="robots" content="{{ metaRobots }}" />
+    <meta name="description" content="{{ metaDescription or eleventyComputed.metaDescription or metadata.description }}" />
+    <meta name="keywords" content="{{ metaKeywords or eleventyComputed.metaKeywords or metaKeywords.description }}" />
+
+    <meta property="og:locale" content="es_ES">
+
+		<meta property="og:url" content="https://{{global.url}}">
+		<meta name="twitter:card" content="{{page.fileSlug}}" />
+		<meta name="twitter:title" content="{{page.fileSlug}}" />
+		<meta name="twitter:description" content="Blog | {{page.fileSlug}}">
+
+
+    <meta property="og:title" content="{{page.fileSlug}}" />
+    <meta property="og:description" content="Blog | {{page.fileSlug}}" />
+    <meta property="og:url" content="https://{{global.url}}/blog/{{page.fileSlug}}" />
+    <meta property="og:image" content="https://{{global.url}}{{image}}" />
+
+
+
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://code.jquery.com/">
+
+
+    <!-- Google Tag Manager -->
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-57XFVMK');
+  </script>
+  <!-- End Google Tag Manager -->
+
+
+    <link rel="icon" type="image/png" href="/assets/static/favicons/favicon32x32.webp" />
+
+    <style>
+        :root {
+      --c-gray: {{global.c_gray}};
+      --c-primary: {{global.c_primary}};
+      --c-secondary: {{global.c_secondary}};
+      --bg-primary: {{global.bg_primary}};
+
+
+      --c-bg-light: {{global.c_bg_light}};
+      --c-bg-dark: {{global.c_bg_dark}};
+
+      --bg-dark: {{global.bg_dark}};
+      --bg-light: {{global.bg_light}};
+
+
+      --btn-radius: {{global.btn_radius}};
+      --padding-global: {{global.padding_global}};
+      --btn-radius: {{global.btn_radius}};
+      }
+    </style>
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="canonical" href="https://{{ global.url }}{{ page.url | url }}" />
+
+
+    <meta property="og:image" content="https://{{ global.url }}/assets/static/images/favicon32x32.webp" />
+
+
+
+
+
+
+    <!-- End Google Tag Manager -->
+  </head>
+<body class="contain {% if page.url == '/'%}home{% endif %}" >
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57XFVMK"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+
+{% set breadcrumbs = [] %}
+
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id= {{
+          global.tag_manager
+        }}"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    {% include 'components/header.njk' %}
+    <main class=" ">
+      {{ content | safe }}
+    </main>
+    {% include 'templates/qr-footer.njk' %}
+
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script  src=" https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js "></script>
+    <script defer   src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script type="module" src="/assets/js/index.js"></script>
+    <script type="module" src="/assets/js/inview.js"></script>
+    <script>
+   
+      const handleSubmit = (event) => {
+        event.preventDefault();
+        const myForm = event.target;
+        const formData = new FormData(myForm);
+        fetch("/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          body: new URLSearchParams(formData).toString()
+        })
+          .then(() => console.log("Form successfully submitted"))
+          .catch((error) => alert(error));
+      };
+    </script>
+
+        <!-- Meta Pixel Event Code -->
+        <script type="text/javascript">
+          document.addEventListener( 'wpcf7mailsent', function( event ) {
+          if( "fb_pxl_code" in event.detail.apiResponse){
+            eval(event.detail.apiResponse.fb_pxl_code);
+          }
+        }, false );
+      </script>
+      <!-- End Meta Pixel Event Code -->
+
+      
+
+<link async rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  </body>
+</html>

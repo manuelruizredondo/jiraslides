@@ -1,0 +1,34 @@
+---
+layout: base.njk
+---
+{% set noheroimage = [] %}
+{% import "../../../node_modules/boilerplate-modules/src/_includes/macros/_insert.njk" as insert %}
+{% import "../macros/_insert.njk" as insert %}
+
+
+<div class="main-article">
+
+
+
+
+
+  {% include '../templates/qr-hero.njk' %}
+
+
+
+
+  {% include "../templates/qr-why.njk" %}
+
+
+  {% include "../components/qr-swiper-34.njk" %}
+
+  {% include "../components/qr-swiper-32.njk" %}
+
+  {% include "../templates/qr-features.njk" %}
+
+
+  {% include "../components/qr-brands.njk" %}
+
+  {# {% include "../templates/contacta_1.njk" %} #}
+  {% include "../templates/qr-contacta.njk" %}
+</div>

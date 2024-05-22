@@ -1,0 +1,145 @@
+
+{% import "macros/_insert.njk" as insert %}
+
+
+{% set parent = global.blog %}
+<article class="main-article   ">
+  {% set next = collections.blog | nextInCollection(page.fileSlug) %}
+  {% set previous = collections.blog | prevInCollection(page.fileSlug) %}
+
+  
+  {% set previous2 = collections.blog | prevInCollectionnext(page.fileSlug) %}
+
+  {% set next2 = collections.blog | nextInCollectionnext(page.fileSlug) %}
+<div class="inview">
+  
+  
+    <section   class="">
+      <div class="container-global mx-auto   ">
+        <div class="row section-x ptr-200 pbr-120  align-middle  ">
+          <div class="col-xs-12 col-sm-10 front-text mdmax:mb-42">
+  
+              <div class=" mb-24">
+                <h1 class="fluid-4-r ">
+                  {% call insert.splitenpalabras(title , '',10,10  ) %} {% endcall %}
+                </h1>
+              </div>
+  
+          </div>
+        </div>
+      </div>
+    </section>
+  
+  
+    <div class="container-global mx-auto pt-32   ">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 appear">
+          <div class="innermarkdown">
+            <div class="aspect-11 p-relative mb-32">
+              <img class="border-24 mb-24 video-cover" width="100%" src="{{ image }} " alt="">
+            </div>
+            <div class="h2">ARTÍCULO </div>
+            <div class="p1 c-middle-grey mb-32">{{ fecha }} </div>
+  
+            <div class="h2">COMPARTIR</div>
+            <div class="is-flex align-middle"><img class="pr-8" src="/assets/static/images/x.svg" alt="">
+              <img class="pr-8" src="/assets/static/images/linkeding.svg" alt="">
+              <img src="/assets/static/images/whatsapp.svg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="col-xs-12 col-sm-7">
+          <div class="innermarkdown">
+            {{ content | safe }}
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+  <div class="bg-light">
+    <div class="container-global mx-auto pt-64">
+      <div class="row pb-64">
+        <div class="col-xs-9">
+          <h4 class="h1">Artículos relacionados que <span class="c-orange">podrían interesarte</span></h4>
+        </div>
+        <div class="col-xs-3 text-right ">
+          <a class="h1 c-middle-grey" href="/blog/ "> Ver mas</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="container-global mx-auto pbr-64 inview">
+
+      <div class="row appear">
+        {% if next %}
+        <div class="col-xs-4">
+     
+          <a href="{{ next.url }} ">
+            <div class="aspect-54 border-24 p-relative o-hidden mb-24">bbb
+              <img class="video-cover" width="100%" src="{{ next.data.image }}" alt="">
+            </div>
+            <p class="p5">{{ next.data.title }}</p>
+          </a>
+
+   
+        </div>
+
+        {% endif %}
+
+
+
+        {% if previous %}
+
+        <div class="col-xs-4">
+
+
+ 
+          <a href="{{ previous.url }}">
+            <div class="aspect-54 border-24 p-relative o-hidden mb-24">sss
+              <img class="video-cover" width="100%" src="{{ previous.data.image }}" alt="">
+            </div>
+            <p class="p5">{{ previous.data.title }}</p>
+          </a>
+
+     
+        </div>
+
+        {% endif %}
+
+
+
+        <div class="col-xs-4">
+
+
+          {% if previous2 %}
+          <a href="{{ previous2.url }}">
+            <div class="aspect-54 border-24 p-relative o-hidden mb-24">
+              <img class="video-cover" width="100%" src="{{ previous2.data.image }}" alt="">
+            </div>
+            <p class="p5">{{ previous2.data.title }}</p>
+          </a>
+  
+
+
+
+          {% elif next2 %}
+          <a href="{{ next2.url }}">
+            <div class="aspect-54 border-24 p-relative o-hidden mb-24">
+              <img class="video-cover" width="100%" src="{{ next2.data.image }}" alt="">
+            </div>
+            <p class="p5">{{ next2.data.title }}</p>
+
+
+          {% endif %}
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  {% include 'templates/qr-contacta.njk' %}
+</article>

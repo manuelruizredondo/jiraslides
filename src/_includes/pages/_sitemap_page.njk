@@ -1,0 +1,39 @@
+---
+layout: base.njk
+---
+<div class="container ptr-120">
+
+<div class="fluid-4-r mb-64 ">Seo Sitemap  </div>
+
+<ul class="list-clear">
+    {# Ordenar y listar todas las páginas por título, excluyendo las sin título #}
+    {% for page in collections.all | sort(attribute='data.metaTitle') %}
+        {% if page.data.metaTitle %}
+            <li>
+                <a class="ttc" href="{{ page.url | url }}">{{ page.fileSlug }}  {{ page.data.realizada }}</a>
+            </li>
+
+            <b>Seo Title: </b>
+            <span class="{% if page.data.metaTitle.length > 60 %}red-text{% endif %}">
+                {{ page.data.metaTitle }}
+            </span>
+            <br>
+            <b>Seo metaDescription: </b>
+            
+            <span class="{% if page.data.metaDescription.length > 160 %}red-text{% endif %}">
+                {{ page.data.metaDescription }}
+            </span>
+            
+  
+            <br>
+            <hr class="mt-32">
+        {% endif %}
+    {% endfor %}
+</ul>
+</div>
+
+<style>
+.red-text {
+    color: red;
+}
+</style>

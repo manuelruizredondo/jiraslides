@@ -1,0 +1,123 @@
+---
+layout: base.njk
+---
+
+
+{% import "macros/_insert.njk" as insert %}
+
+{% include "../templates/qr-herofull.njk" %}
+<div class="section  pbr-200  ">
+{# <div class="container-global mx-auto pbr-64 ">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-outline btn-selector mr-8 is-active"> Todos</button>
+      <button class="btn btn-outline btn-selector  mr-8"> Artículo</button>
+      <button class="btn btn-outline btn-selector  mr-8"> Entrevista</button>
+
+
+
+
+
+
+    </div>
+  </div>
+</div> #}
+
+  <div class="container-global mx-auto content-div ">
+    <ul role="list" class="list-clear blog-section">
+
+      {# {% for blog in collections.blog | reverse %}
+        {% include 'blog/_blog-loop.njk' %}
+      {% endfor %} #}
+
+
+
+
+
+        {%- for blogs in collections.blog | slice(6) %}
+          <ul class="column-{{ loop.index }}">
+          {%- for blog in blogs %}
+         
+              
+              {% include 'blog/_blog-loop.njk' %}
+      
+      
+            
+          {%- endfor %}
+          </ul>
+        {%- endfor %}
+
+      
+
+
+
+    </ul>
+  </div>
+
+
+<div class="container">
+
+
+{# Establece el número de artículos por página #}
+{% set postsPerPage = 2 %}
+
+{# Calcula el número total de páginas 
+{% set totalPages = (collections.blog | length / postsPerPage) | round(0, 'ceil') %}
+
+
+{% set currentPage = 1 %}  {# Aquí puedes añadir una lógica para leer un parámetro de la URL si es necesario 
+
+
+{% set start = (currentPage - 1) * postsPerPage %}
+{% set end = start + postsPerPage %}
+
+
+<p>Total de entradas: {{ collections.blog | length }}</p>
+<p>Total de páginas: {{ totalPages }}</p>
+<p>Página actual: {{ currentPage }}</p>
+
+<p>start: {{ start }}</p>
+<p>postsPerPage : {{ postsPerPage }}</p>
+
+  #}
+
+
+
+
+
+
+{% if currentPage > 1 %}
+<a href="?page={{ currentPage - 1 }}">Anterior</a>
+{% endif %}
+{% if currentPage < totalPages %}
+<a href="?page={{ currentPage + 1 }}">Siguiente</a>
+{% endif %}
+</div>
+
+
+
+
+</div>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      var buttons = document.querySelectorAll('.btn-selector');
+      var contentDiv = document.getElementById('content-div');
+  
+      buttons.forEach(function(button) {
+          button.addEventListener('click', function() {
+              // Eliminar todas las clases del div y reiniciar con las clases base
+              contentDiv.className = 'btn btn-selector btn-outline';
+  
+              // Obtener el texto del botón y convertirlo en una clase válida
+              var className = button.textContent.trim().toLowerCase().replace(/\s+/g, '-');
+              
+              // Añadir esta nueva clase al div
+              contentDiv.classList.add(className);
+          });
+      });
+  });
+  
+  </script>

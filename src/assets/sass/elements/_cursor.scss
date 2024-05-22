@@ -1,0 +1,40 @@
+
+
+.cursor {
+  position: fixed;
+  z-index: 100;
+  opacity: 1;
+  cursor: none;
+
+  pointer-events: none;
+  width: 150px;
+  height: 150px;
+  transition: all 0.1s;
+  transform-origin: center;
+  transform: scale(1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+
+
+.cursor-inner{
+  width: 150px;
+  height: 150px;
+  transform-origin: center;
+  background-color: rgb(254, 109, 78);
+  transform: scale(1);
+  border-radius: 50%;
+  color: white;
+  @include font-medium();
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  opacity: 0;
+
+
+}
+
+}
+

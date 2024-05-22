@@ -1,0 +1,123 @@
+---
+layout: base.njk
+---
+{% import "macros/_insert.njk" as insert %}
+
+<div class="container-5">  
+
+
+
+
+  <div class="fluid-4-r ptr-200"> Nuestra web tiene un sistema de diseño, el botón acceder nos llevará a la plataforma, pero de momento se usará para test. </div>
+
+
+  <div class="fluid-7-r ptr-64"> Se muestran modulos independientes (en construcción) </div>
+
+  
+
+{% include 'templates/qr-herofull.njk' %}
+
+
+<div class="row mb-64">
+  <div class="col-xs-12">
+
+
+    <div class="fluid-2-r"> Fluid 2 Lorem   </div>
+    <div class="fluid-3-r"> Fluid 3 Lorem   </div>
+    <div class="fluid-4-r"> Fluid 4 Lorem   </div>
+<br>
+
+    <div class="h1"> H1 Lorem ipsum dolor set  </div>
+    <div class="h2"> h2 Lorem ipsum dolor set  </div>
+    <div class="h3"> h3 Lorem ipsum dolor set  </div>
+    <div class="p1"> p1 Lorem ipsum dolor set  </div>
+    <div class="p2"> p2 Lorem ipsum dolor set  </div>
+    <div class="p3"> p3 Lorem ipsum dolor set  </div>
+    
+    <div class="p4"> p4 Lorem ipsum dolor set  </div>
+    
+    <div class="p5"> p5 Lorem ipsum dolor set  </div>
+    
+    <div class="p6"> p6 Lorem ipsum dolor set  </div>
+    
+    <br>
+
+
+
+    <div class="c-orange">c-orange</div>
+    <div class="c-primary">c-primary</div>
+    <div class="c-secondary">c-secondary</div>
+    <div class="c-blue">c-blue</div>
+
+    <br>
+
+    <div class="bg-color">bg-color</div>
+    <div class="bg-dark">bg-dark</div>
+    <br>
+    <div class="c-dark-grey">c-dark-grey</div>
+    <div class="c-middle-grey">c-middle-grey</div>
+    <div class="c-light-grey">c-light-grey</div>
+  </div>
+</div>
+
+
+
+
+<div class="row">
+  <div class="col-xs-12">
+    <h1 class="h1 mb-24">Aspect ratios </h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="grid-6 text-12-r">
+    <div class="aspect-32 border-1">
+      aspect-32
+    </div>
+
+    <div class="aspect-21 border-1">
+      aspect-21
+    </div>
+    <div class="aspect-11 border-1">
+      aspect-11
+    </div>
+    <div class="aspect-300 border-1">
+      aspect-300
+    </div>
+  </div>
+</div>
+
+
+
+
+{% include 'templates/qr-features.njk' %}
+<div class="p-relative">{% include 'templates/qr-hero.njk' %}</div>
+{% include 'templates/qr-herotextimg.njk' %}
+{% include 'templates/qr-why.njk' %}
+
+QR-HEROFULL
+
+
+{% include 'components/qr-heroblog.njk' %}
+QR-HEROBLOG
+
+{% include 'components/qr-brands.njk' %}
+{% include 'components/brands.njk' %}
+{% include 'components/qr-heroblog.njk' %}
+{% include 'components/qr-herocaso.njk' %}
+{% include 'components/qr-herosub.njk' %}
+
+
+<div class="row">
+  <div class="col-xs-4">{% call insert.imgtext( 'foto.jpg', 'Conoce quiénes son tus clientes con la matriz de Check.','Realizamos una clasificación para conocer quiénes son tus clientes Platino, Oro y Bronce.', '', '', '32' ,''  ) %} {% endcall %}</div>
+</div>
+
+
+<div class="h2">imgtext </div>
+<div class="mb-24">img = '',titulo = '', texto1 = '' ,texto2 = '', link = '',ratio='' </div>
+
+{% include "../templates/qr-contacta.njk" %}
+
+QR-CONTACTA
+
+  </div>

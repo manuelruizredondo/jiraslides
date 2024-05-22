@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ metaTitle }}</title>
+  <meta name="robots" content="{{ metaRobots }}" />
+  <meta name="description" content="{{ metaDescription or eleventyComputed.metaDescription or metadata.description }}" />
+  <meta name="keywords" content="{{ metaKeywords or eleventyComputed.metaKeywords or metaKeywords.description }}" />
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Check - Una herramienta pensada para ayudar a bares y restaurantes.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Check - Check">
+  <meta property="og:description" content="La forma más rápida y sencilla para pedir y pagar en restaurantes. Tu cliente escanea el QR, pide y paga en segundos.">
+  <meta property="og:url" content="https://duttijiras.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Check - Check">
+  <meta name="twitter:description" content="La forma más rápida y sencilla para pedir y pagar en restaurantes. Tu cliente escanea el QR, pide y paga en segundos.">
+  <meta property="og:image" content="https://{{ global.url }}/assets/static/favicons/logocheck_512x512.png" />
+
+
+
+
+    <style>
+        :root {
+      --c-gray: {{global.c_gray}};
+      --c-primary: {{global.c_primary}};
+      --c-secondary: {{global.c_secondary}};
+      --bg-primary: {{global.bg_primary}};
+
+
+      --c-bg-light: {{global.c_bg_light}};
+      --c-bg-dark: {{global.c_bg_dark}};
+
+      --bg-dark: {{global.bg_dark}};
+      --bg-light: {{global.bg_light}};
+
+
+      --btn-radius: {{global.btn_radius}};
+      --padding-global: {{global.padding_global}};
+      --btn-radius: {{global.btn_radius}};
+      }
+    </style>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body class="contain {% if page.url == '/'%}home{% endif %}">
+
+
+
+
+  {% set breadcrumbs = [] %}
+
+
+
+  <main class=" ">
+    {{ content | safe }}
+  </main>
+
+</html>

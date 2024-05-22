@@ -1,0 +1,39 @@
+---
+layout: base.njk
+---
+{% import "macros/_insert.njk" as insert %}
+{% include 'templates/qr-herofull.njk' %}
+{% include 'components/qr-herosub.njk' %}
+
+
+
+
+
+    <div class="container-3 ptr-120    ">
+        <div class="row  ">
+            <div class="col-xs-12">
+                <ul role="list" class="list-clear grid-2 grid-async  ">
+                    {% set contador = 0 %}
+                    {% for casosdeexito in collections.casosdeexito | reverse %}
+                    {% set contador = contador + 1 %}
+                    <li class="  delay-{{contador * 250}} ">{% include 'casosdeexito/_caso-loop.njk' %}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<div class="container-3">
+    <div class="row">
+        <div class="col-xs-12 align-center ptr-120 pbr-120">
+            <div>
+                <div class="p1 mb-16"> ¿Quieres saber más? </div>
+            </div>
+            <a href="/blog"><button aria-label=" Leer nuestros articulos" class="btn btn-primary h1"> Leer nuestros articulos</button></a>
+        </div>
+    </div>
+</div>
+{% include "../templates/qr-contacta.njk" %}

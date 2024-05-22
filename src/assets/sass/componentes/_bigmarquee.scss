@@ -1,0 +1,65 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - 1rem));
+  }
+}
+
+.bigmarquee {
+  grid-column-gap: 1rem;
+  display: flex;
+  overflow: hidden;
+}
+.bigmarquee-content {
+  min-width: 100%;
+  flex: none;
+  justify-content: space-around;
+  display: flex;
+}
+
+.scroll {
+  animation: scroll 50s linear infinite;
+}
+
+.bigmarquee-content.scroll {
+  grid-column-gap: 1rem;
+}
+
+.bigmarquee-text {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-size: 6.625rem;
+  font-weight: 400;
+  line-height: 100%;
+
+  @media (min-width: $break-sm) {
+    font-size: 10.625rem;
+    
+    }
+
+
+
+}
+
+.brand-star {
+  padding: 10px 30px 0;
+  text-align: center;
+  svg{
+    width: 80%;
+  }
+
+}

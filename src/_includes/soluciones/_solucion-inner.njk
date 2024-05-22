@@ -1,0 +1,113 @@
+---
+layout: base.njk
+---
+{% import "macros/_insert.njk" as insert %}
+
+
+
+{% include 'templates/qr-herotextimg.njk' %}
+
+<div class="mb-64">{% include 'components/qr-herosub.njk' %}</div>
+
+<div class="container pbr-64">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="bg-dark border-24 p-32">
+                <h5 class="h1">El proceso es simple</h5>
+                <p class="p1 mb-24">
+                    Escanear, seleccionar productos, hacer el pedido, realizar el pago y ¡listo!
+                </p>
+                <div class="text-center">
+                    <img class=" " src="/assets/static/images/funciona.png " alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container">
+    <div class="row  pbr-120">
+        <div class="col-xs-12  col-sm-6 ">
+            <div class="aspect-32 p-relative"><img class="  w-100  " src="/assets/static/images/solucion1.png " alt="">
+            </div>
+        </div>
+        <div class="col-xs-12  col-sm-1"></div>
+        <div class=" col-xs-12 col-sm-5 mt-64">
+            <div class="h1 mb-24">
+                Nuestra carta digital facilita la selección de platos de manera intuitiva.
+            </div>
+            <div class="mb-32">
+                Hemos eliminado las barreras tradicionales para que tanto el cliente como tú podaís disfrutar de la
+                mejor experiencia: el cliente sin esperas y el camarero siendo más eficiente.
+            </div>
+            <button aria-label=" Empezar ahora"  class="btn btn-primary"> Empezar ahora</button>
+        </div>
+    </div>
+</div>
+{% include '../templates/qr-features.njk' %}
+<div class="container ptr-120 pbr-120">
+    <div class="row">
+        <div class="col-xs-12 col-md-6 mb-40">
+            <h5 class="h2 c-orange">BENEFICIOS PARA EL COMENSAL</h5>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            {% call insert.imgtextlist( '', 'Ahorra tiempo','Pide y paga sin esperas, el tiempo es lo que más valoramos las personas.', '' ) %} {% endcall %}
+            {% call insert.imgtextlist( '', 'Una experiencia excelente y sin fricciones',' Pedir ya está al alcance de un click desde tu móvil de una manera sencilla y simple, sin fricciones en el momento de pago. ', '' ) %} {% endcall %}
+            {% call insert.imgtextlist( '', 'Seguridad en los pagos',' Check trabaja con las pasarelas de pago más seguras del mercado que garantizan la seguridad en el pago como Stripe, Redsys o Square. ', '' ) %} {% endcall %}
+            {% call insert.imgtextlist( '', 'Menos papel',' Poder guardar el ticket de compra directamente en tu email, no guardes tickets en papel. ', '' ) %} {% endcall %}
+            {% call insert.imgtextlist( '', 'Google Reviews',' Posibilidad de dejarán una reseña constructiva en Google Reviews en el momento. ¡El 29% de los comensales dejan reseña con Check! ¡Muchos de tus comensales han acudido a tu local porque te han encontrado en Google! ', '' ) %} {% endcall %}
+        </div>
+    </div>
+</div>
+{% include '../components/qr-swiper-34.njk' %}
+<div class="container ptr-120 pbr-120">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="bg-dark border-24 pt-32 pb-32 px-32">
+                <div class="row">
+                    <div class="col-xs-12 mb-32">
+                        <div class="h1">Lorem ipsum dolor sit amet alliam</div>
+                        <div class="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-xs-3">
+                        <div class="p-32">
+                            <div class="fluid-4-r mb-8">4.77</div>
+                            <div class="h3">Calificación promedio de los restaurantes dominicales</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="p-32">
+                            <div class="fluid-4-r mb-8">423K </div>
+                            <div class="h3">Reseñas de Google de 5 estrellas recopiladas</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="p-32">
+                            <div class="fluid-4-r mb-8">502K</div>
+                            <div class="h3">Correos electrónicos de resumen enviados</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="p-32">
+                            <div class="fluid-4-r mb-8">505K</div>
+                            <div class="h3">Respuestas de IA enviadas a los clientes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6">
+            {% call insert.imgtext( 'foto.jpg', 'El 29% de los comensales con Check dejan una reseña.','', '' , ''
+            ,'32','') %} {%
+            endcall %}
+        </div>
+        <div class="col-xs-6">jdfofidjspfds</div>
+    </div>
+</div>
+{% include "../templates/qr-contacta.njk" %}

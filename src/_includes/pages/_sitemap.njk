@@ -1,0 +1,8 @@
+---
+layout: base.njk
+---
+<ul>
+  {% for url in sitemap %}
+    <li><a href="{{ url.loc }}">{{ url.loc }}</a></li>
+  {% endfor %}
+</ul>

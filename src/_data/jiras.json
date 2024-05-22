@@ -1,0 +1,288 @@
+{
+  "grupo": [
+    {
+      "nombre": "Dutti Jira links",
+      "imagen": "/assets/static/images/restaurantes/boka.svg"
+    }
+  ],
+  "jira": [
+    {
+      "nombre": "mahalopoke",
+      "imagen": "/assets/static/images/restaurantes/mahalo.jpg"
+    },
+    {
+      "nombre": "vulcano",
+      "imagen": "/assets/static/images/restaurantes/vulcano.jpg"
+    },
+    {
+      "nombre": "mostaza",
+      "imagen": "/assets/static/images/restaurantes/mostaza.jpg"
+    },
+    {
+      "nombre": "sentaki",
+      "imagen": "/assets/static/images/restaurantes/sentaki.jpg"
+    },
+    {
+      "nombre": "calambrito",
+      "imagen": "/assets/static/images/restaurantes/calambrito.jpg"
+    },
+    {
+      "nombre": "flordegrana",
+      "imagen": "/assets/static/images/restaurantes/flordegrana.jpg"
+    }
+  ],
+  "elementos": [
+    {
+      "titular": "Actualización de Usuarios",
+      "subtitulo": "INTEGRACIÓN",
+      "descripcion": "Permite la actualización masiva de datos de usuario desde una fuente externa.",
+      "imagen": "https://example.com/image1.jpg",
+      "entrega_web": "10 de abril",
+      "entrega_ios": "15 de abril",
+      "entrega_android": "20 de abril",
+      "golive": "25 de abril",
+      "links": [
+        {
+          "nombre": "Carlos",
+          "apellido": "Gómez",
+          "url": "https://example.com/carlos"
+        },
+        {
+          "nombre": "Laura",
+          "apellido": "Martínez",
+          "url": "https://example.com/laura"
+        },
+        {
+          "nombre": "Luis",
+          "apellido": "Pérez",
+          "url": "https://example.com/luis"
+        },
+        {
+          "nombre": "Ana",
+          "apellido": "García",
+          "url": "https://example.com/ana"
+        },
+        {
+          "nombre": "Miguel",
+          "apellido": "Rodríguez",
+          "url": "https://example.com/miguel"
+        },
+        {
+          "nombre": "María",
+          "apellido": "Hernández",
+          "url": "https://example.com/maria"
+        }
+      ]
+    },
+    {
+      "titular": "Sistema de Pago",
+      "subtitulo": "IMPLEMENTACIÓN",
+      "descripcion": "Integración de un nuevo sistema de pago seguro y eficiente.",
+      "imagen": "https://example.com/image2.jpg",
+      "entrega_web": "5 de mayo",
+      "entrega_ios": "10 de mayo",
+      "entrega_android": "15 de mayo",
+      "golive": "20 de mayo",
+      "links": [
+        {
+          "nombre": "Pedro",
+          "apellido": "López",
+          "url": "https://example.com/pedro"
+        },
+        {
+          "nombre": "Elena",
+          "apellido": "Gómez",
+          "url": "https://example.com/elena"
+        },
+        {
+          "nombre": "Roberto",
+          "apellido": "Fernández",
+          "url": "https://example.com/roberto"
+        },
+        {
+          "nombre": "Sofía",
+          "apellido": "Sánchez",
+          "url": "https://example.com/sofia"
+        },
+        {
+          "nombre": "Alberto",
+          "apellido": "Jiménez",
+          "url": "https://example.com/alberto"
+        },
+        {
+          "nombre": "Carmen",
+          "apellido": "Ruiz",
+          "url": "https://example.com/carmen"
+        }
+      ]
+    },
+    {
+      "titular": "Optimización de Búsqueda",
+      "subtitulo": "MEJORA",
+      "descripcion": "Implementación de algoritmos avanzados para mejorar los resultados de búsqueda.",
+      "imagen": "https://example.com/image3.jpg",
+      "entrega_web": "15 de junio",
+      "entrega_ios": "20 de junio",
+      "entrega_android": "25 de junio",
+      "golive": "30 de junio",
+      "links": [
+        {
+          "nombre": "Fernando",
+          "apellido": "Méndez",
+          "url": "https://example.com/fernando"
+        },
+        {
+          "nombre": "Isabel",
+          "apellido": "Vargas",
+          "url": "https://example.com/isabel"
+        },
+        {
+          "nombre": "Diego",
+          "apellido": "Cano",
+          "url": "https://example.com/diego"
+        },
+        {
+          "nombre": "Paula",
+          "apellido": "Castro",
+          "url": "https://example.com/paula"
+        },
+        {
+          "nombre": "Héctor",
+          "apellido": "Navarro",
+          "url": "https://example.com/hector"
+        },
+        {
+          "nombre": "Natalia",
+          "apellido": "Ortega",
+          "url": "https://example.com/natalia"
+        }
+      ]
+    },
+    {
+      "titular": "Notificaciones en Tiempo Real",
+      "subtitulo": "DESARROLLO",
+      "descripcion": "Sistema de notificaciones en tiempo real para mejorar la comunicación con los usuarios.",
+      "imagen": "https://example.com/image4.jpg",
+      "entrega_web": "1 de julio",
+      "entrega_ios": "5 de julio",
+      "entrega_android": "10 de julio",
+      "golive": "15 de julio",
+      "links": [
+        {
+          "nombre": "Javier",
+          "apellido": "Ramos",
+          "url": "https://example.com/javier"
+        },
+        {
+          "nombre": "Verónica",
+          "apellido": "Díaz",
+          "url": "https://example.com/veronica"
+        },
+        {
+          "nombre": "Oscar",
+          "apellido": "Morales",
+          "url": "https://example.com/oscar"
+        },
+        {
+          "nombre": "Patricia",
+          "apellido": "Gil",
+          "url": "https://example.com/patricia"
+        },
+        {
+          "nombre": "Sergio",
+          "apellido": "Romero",
+          "url": "https://example.com/sergio"
+        },
+        {
+          "nombre": "Lucía",
+          "apellido": "Martín",
+          "url": "https://example.com/lucia"
+        }
+      ]
+    },
+    {
+      "titular": "Gestión de Inventarios",
+      "subtitulo": "OPTIMIZACIÓN",
+      "descripcion": "Mejora de la gestión de inventarios para reducir costos y mejorar la eficiencia.",
+      "imagen": "https://example.com/image5.jpg",
+      "entrega_web": "20 de agosto",
+      "entrega_ios": "25 de agosto",
+      "entrega_android": "30 de agosto",
+      "golive": "5 de septiembre",
+      "links": [
+        {
+          "nombre": "Andrés",
+          "apellido": "Muñoz",
+          "url": "https://example.com/andres"
+        },
+        {
+          "nombre": "Cristina",
+          "apellido": "Castellanos",
+          "url": "https://example.com/cristina"
+        },
+        {
+          "nombre": "Raúl",
+          "apellido": "Domínguez",
+          "url": "https://example.com/raul"
+        },
+        {
+          "nombre": "Lorena",
+          "apellido": "Santos",
+          "url": "https://example.com/lorena"
+        },
+        {
+          "nombre": "Mario",
+          "apellido": "Vázquez",
+          "url": "https://example.com/mario"
+        },
+        {
+          "nombre": "Elisa",
+          "apellido": "Pérez",
+          "url": "https://example.com/elisa"
+        }
+      ]
+    },
+    {
+      "titular": "Soporte Multilenguaje",
+      "subtitulo": "INNOVACIÓN",
+      "descripcion": "Incorporación de soporte multilenguaje para alcanzar una audiencia global.",
+      "imagen": "https://example.com/image6.jpg",
+      "entrega_web": "10 de septiembre",
+      "entrega_ios": "15 de septiembre",
+      "entrega_android": "20 de septiembre",
+      "golive": "25 de septiembre",
+      "links": [
+        {
+          "nombre": "Tomás",
+          "apellido": "Rubio",
+          "url": "https://example.com/tomas"
+        },
+        {
+          "nombre": "Sandra",
+          "apellido": "Alonso",
+          "url": "https://example.com/sandra"
+        },
+        {
+          "nombre": "Iván",
+          "apellido": "Torres",
+          "url": "https://example.com/ivan"
+        },
+        {
+          "nombre": "Rosa",
+          "apellido": "Molina",
+          "url": "https://example.com/rosa"
+        },
+        {
+          "nombre": "Esteban",
+          "apellido": "Ortiz",
+          "url": "https://example.com/esteban"
+        },
+        {
+          "nombre": "Alicia",
+          "apellido": "Mendoza",
+          "url": "https://example.com/alicia"
+        }
+      ]
+    }
+  ]
+}
